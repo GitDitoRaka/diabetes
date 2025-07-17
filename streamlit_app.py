@@ -65,18 +65,19 @@ with col1:
                 "blood_pressure": blood_pressure
             }
             try:
-                response = requests.post("http://127.0.0.1:5000/predict", json=payload)
+                # Ganti URL dengan URL API yang sudah di-deploy di cloud
+                response = requests.post("https://your-flask-api.herokuapp.com/predict", json=payload)
                 if response.status_code == 200:
                     data = response.json()
                     st.session_state.hasil = data.get('prediksi', '-')
                     st.session_state.risiko = data.get('risiko', 0)
                     st.success(f"**{st.session_state.hasil}**")
                 elif response.status_code == 400:
-                    st.error(f"Kesalahan Input: {response.json().get('error','Terjadi kesalahan input.')}")
+                    st.error(f"Kesalahan Input: {response.json().get('error','Terjadi kesalahan input.')}") 
                 else:
                     st.error(f"Terjadi kesalahan saat memanggil API. Status Code: {response.status_code}")
             except requests.exceptions.ConnectionError:
-                st.error("Koneksi ke API gagal! Pastikan API Flask Anda berjalan di `http://127.0.0.1:5000`.")
+                st.error("Koneksi ke API gagal! Pastikan API Flask Anda berjalan di cloud.")
             except Exception as e:
                 st.error(f"Terjadi kesalahan: {e}")
 
