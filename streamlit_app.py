@@ -129,7 +129,7 @@ st.markdown(
     <div style='text-align: center; font-size: small; color: #888;'>
     <b>Disclaimer:</b> Hasil prediksi ini hanya estimasi berbasis data.<br>
     Untuk diagnosis pasti, konsultasikan dengan tenaga medis profesional.<br>
-    &copy; 2024 [Nama Kamu] | Kontak: email@domain.com
+    &copy; 2024 [Nandito] | Kontak: 2211501038@unisa.com
     </div>
     """, unsafe_allow_html=True
 )
