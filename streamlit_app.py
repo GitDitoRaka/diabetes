@@ -30,7 +30,7 @@ with st.sidebar:
     st.title("Tips Sehat Hari Ini 🥗")
     st.info("Jaga pola makan, rutin olahraga, dan cek kesehatan secara berkala.")
     st.markdown("---")
-    st.caption("Dikembangkan oleh: [Nama Kamu] • IG: @username")
+    st.caption("Dikembangkan oleh: Nandito Raka • IG: @ditoowww_")
 
 col1, col2 = st.columns([1, 2])
 
